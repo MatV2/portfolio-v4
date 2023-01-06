@@ -8,6 +8,7 @@
     --dark-cyan: hsl(158, 36%, 37%);
     --dark-cyan-hover: hsl(158, 91%, 14%);
     --cream: hsl(30, 38%, 92%);
+
     /* Neutral */
     --very-dark-blue: hsl(212, 21%, 14%);
     --dark-grayish-blue: hsl(228, 12%, 48%);
@@ -21,11 +22,18 @@
 
 header{
     height: 100vh;
-    background-color: bisque;
+    background-color: var(--white);
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.home-title{
+    background-color: var(--cream);
 }
 
 footer{
     height: 50vh;
-    
+    background-color: var(--very-dark-blue);
 }
