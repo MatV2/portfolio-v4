@@ -65,11 +65,6 @@ div.navbar ul li a{
     transition: all 0.5s;
 }
 
-div.navbar ul li a.active{
-    letter-spacing: 5px;
-    color: var(--dark-grayish-blue);
-}
-
 div.navbar ul li a:hover{
     color: var(--dark-grayish-blue);
     text-decoration: none;
@@ -132,10 +127,16 @@ div.home-title span h2{
     font-size: 1em;
 }
 
-footer{
+#about{
     height: 1000px;
     width: 100%;
     background-color: blue;
+}
+
+#projects{
+    height: 1000px;
+    width: 100%;
+    background-color: red;
 }
 
 @media screen and (max-width = 900px){

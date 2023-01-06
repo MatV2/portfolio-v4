@@ -7,13 +7,17 @@ $(window).on('scroll', () => {
     progressBar.css('width', `${progress}%`);
 });
 
-// Sélectionner tous les onglets de la navbar
-var $tabs = $('.navbar a');
 
-// Ajouter un gestionnaire d'évènement "click" à chaque onglet
-$tabs.on('click', function() {
-  // Retirer la classe "active" de tous les onglets
-  $tabs.removeClass('active');
-  // Ajouter la classe "active" à l'onglet sur lequel on a cliqué
-  $(this).addClass('active');
+// Transition Smooth
+$('.nav-link').on('click', function(e) {
+    // empêche le comportement par défaut des ancres (chargement de la page)
+    e.preventDefault();
+
+    // obtient l'ID de la section ciblée
+    const target = $(this).attr('href');
+
+    // utilise l'animation de défilement de jQuery pour se déplacer vers la section ciblée
+    $('html, body').animate({
+    scrollTop: $(target).offset().top
+    }, 1000);
 });
