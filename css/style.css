@@ -20,6 +20,64 @@
     margin: 0;
 }
 
+/* PROGRESS-BAR */
+.progress-bar {
+    /* définissez la hauteur et la largeur de la barre de progression */
+    height: 3px;
+    width: 0%;
+    top: 0;
+    position: sticky;
+
+    /* ajoutez un arrière-plan de couleur et une bordure */
+    background-color: var(--dark-cyan);
+
+    /* ajoutez un arrondi aux coins */
+    border-radius: 10px;
+  }
+
+/* NAVBAR */
+div.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 1em 0;
+    position: absolute;
+}
+
+div.navbar ul{
+    list-style-type: none;
+    display: flex;
+}
+
+div.navbar ul li{
+    padding: 0 10px 0 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+
+div.navbar ul li a{
+    color: var(--very-dark-blue);
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+
+div.navbar ul li a.active{
+    letter-spacing: 5px;
+    color: var(--dark-grayish-blue);
+}
+
+div.navbar ul li a:hover{
+    color: var(--dark-grayish-blue);
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+
+/*  */
 header{
     height: 100vh;
     background-color: var(--white);
@@ -29,23 +87,34 @@ header{
     align-items: center;
 }
 
-div.home-title{
-    background-color: var(--cream);
+div.home{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-div.home-title span:nth-child(1){
+div.home-title{
+    font-weight: 700;
+}
+
+div.home-title{
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
     display: flex;
-    /* align-items: center; */
-    font-size: 1.5em;
-    padding-bottom: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-div.home-title span h1{
-    -webkit-text-fill-color: var(--white);
-    -webkit-text-stroke: 0.5px;
+div.home-title h1{
+    font-size: 1.5em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+div.home-title h1 span{
+    color: var(--dark-cyan);
     font-size: 1em;
 }
 
@@ -59,12 +128,16 @@ div.home-title span:nth-child(2){
 }
 
 div.home-title span h2{
-    -webkit-text-fill-color: var(--white);
-    -webkit-text-stroke: 0.5px;
+    color: var(--dark-cyan);
     font-size: 1em;
 }
 
 footer{
-    height: 50vh;
-    background-color: var(--very-dark-blue);
+    height: 1000px;
+    width: 100%;
+    background-color: blue;
+}
+
+@media screen and (max-width = 900px){
+
 }
