@@ -21,11 +21,20 @@ $('.nav-link').on('click', function(e) {
   }, 1000);
 });
 
-// Waypoints pour déclencher l'animation fadeInLeft
-$(document).ready(function(){
-  $('#skills').waypoint(function(direction) {
-    $('#skills').addClass('animate__fadeInLeft');
-  }, { offset: '50%' });
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate__fadeInLeft');
+            observer.unobserve(entry.target);
+        }
+    });
 });
+
+cards.forEach((card) => {
+    observer.observe(card);
+});
+
 
 
