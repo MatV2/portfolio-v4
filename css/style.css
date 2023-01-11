@@ -28,10 +28,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body{
-    padding: 0 20px;
-}
-
 /* PROGRESS-BAR */
 .progress-bar {
     /* définissez la hauteur et la largeur de la barre de progression */
@@ -49,42 +45,35 @@ body{
 }
 
 /* NAVBAR */
-div.navbar{
+nav.navbar{
     display: flex;
-    width: 100%;
     justify-content: flex-end;
-    font-size: 1em;
-    text-transform: uppercase;
-    padding: 1em 0;
-    position: absolute;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
 }
 
-div.navbar ul{
-    list-style-type: none;
+div.menu-items ul{
     display: flex;
+    list-style-type: none;
 }
 
-div.navbar ul li{
-    padding: 0 10px 0 10px;
-    font-weight: 700;
-}
-
-
-div.navbar ul li a{
+div.menu-items ul li a{
+    margin: 0 10px;
+    text-transform: uppercase;
+    text-decoration: none;
     color: var(--very-dark-blue);
-    text-decoration: none;
     font-weight: 700;
-    transition: all 0.5s;
+
+    transition: all .4s;
 }
 
-div.navbar ul li a:hover{
+div.menu-items ul li a:hover{
     color: var(--dark-grayish-blue);
-    text-decoration: none;
-    letter-spacing: 5px;
-    font-weight: 700;
+    letter-spacing: 4px;
 }
 
-/*  */
+/* HEADER - HOME */
 header{
     height: 100vh;
     background-color: var(--white);
@@ -142,10 +131,11 @@ div.home-title span h2{
 #about
 {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .about-card
@@ -253,10 +243,43 @@ hr{
     background-color: red;
 }
 
-@media (max-width: 600px)
-{
-    .about-img
-    {
-        display: none;
+#skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/skills.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* filter: brightness(0.5) contrast(150%);  */
+}
+
+.card-row {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 90%;
+    justify-content: center;
+}
+
+.card{
+    flex: 1;
+    margin: 10px;
+    height: 90px;
+    width: 20%;
+    background-color: white;
+    z-index: 11;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .card-row {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 100%;
+        margin: 10px;
     }
 }

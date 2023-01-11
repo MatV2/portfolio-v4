@@ -7,14 +7,6 @@ $(window).on('scroll', () => {
   progressBar.css('width', `${progress}%`);
 });
 
-// Dark-mode
-const toggleButton = $('.dark-mode-toggle');
-
-toggleButton.click(() => {
-    $('body').toggleClass('dark');
-});
-
-
 // Transition Smooth
 $('.nav-link').on('click', function(e) {
   // empêche le comportement par défaut des ancres (chargement de la page)
@@ -28,3 +20,12 @@ $('.nav-link').on('click', function(e) {
   scrollTop: $(target).offset().top
   }, 1000);
 });
+
+// Waypoints pour déclencher l'animation fadeInLeft
+$(document).ready(function(){
+  $('#skills').waypoint(function(direction) {
+    $('#skills').addClass('animate__fadeInLeft');
+  }, { offset: '50%' });
+});
+
+
